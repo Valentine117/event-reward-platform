@@ -2,15 +2,21 @@
   "name": "event-reward-platform",
   "private": true,
   "version": "1.0.0",
-  "engines": { "node": "22.15.0" },
+  "engines": {
+    "node": "22.15.0"
+  },
   "workspaces": [
     "apps/*"
   ],
   "scripts": {
     "start:gateway": "npm --workspace=apps/gateway run start:dev",
-    "start:auth":    "npm --workspace=apps/auth    run start:dev",
-    "start:event":   "npm --workspace=apps/event   run start:dev",
-    "start:all":     "npm run start:auth & npm run start:event & npm run start:gateway",
-    "build":         "npm --workspaces run build"
+    "start:auth": "npm --workspace=apps/auth    run start:dev",
+    "start:event": "npm --workspace=apps/event   run start:dev",
+    "start:all": "npm run start:auth & npm run start:event & npm run start:gateway",
+    "build": "npm --workspaces run build"
+  },
+  "dependencies": {
+    "@nestjs/config": "^4.0.2",
+    "dotenv": "^16.5.0"
   }
 }
