@@ -16,6 +16,12 @@
     "forceConsistentCasingInFileNames": true,
     "noImplicitAny": false,
     "strictBindCallApply": false,
-    "noFallthroughCasesInSwitch": false
+    "noFallthroughCasesInSwitch": false,
+    "paths": {
+      "@lib/schemas/*":   ["../../libs/schemas/*"],
+      "@lib/dtos/*":       ["../../libs/dtos/*"],
+      "@lib/guards/*":    ["../../libs/guards/*"],
+      "@lib/decorators/*":["../../libs/decorators/*"]
+    }
   }
 }

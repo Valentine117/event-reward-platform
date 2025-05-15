@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "sourceMap": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "useDefineForClassFields": false,
+    "baseUrl": ".",
+    "paths": {
+      "@lib/schemas/*":   ["libs/schemas/*"],
+      "@lib/dto/*":       ["libs/dto/*"],
+      "@lib/guards/*":    ["libs/guards/*"],
+      "@lib/decorators/*":["libs/decorators/*"]
+    }
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

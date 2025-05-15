@@ -6,14 +6,17 @@
     "node": "22.15.0"
   },
   "workspaces": [
-    "apps/*"
+    "apps/*",
+    "libs/*"
   ],
   "scripts": {
     "start:gateway": "npm --workspace=apps/gateway run start:dev",
     "start:auth": "npm --workspace=apps/auth    run start:dev",
     "start:event": "npm --workspace=apps/event   run start:dev",
     "start:all": "npm run start:auth & npm run start:event & npm run start:gateway",
-    "build": "npm --workspaces run build"
+    "build:libs": "npm run build --workspaces --parallel",
+    "clean:libs": "npm run clean --workspaces --parallel",
+    "build": "npm run build:libs && npm run build --workspaces apps/*"
   },
   "dependencies": {
     "@nestjs/config": "^4.0.2",
